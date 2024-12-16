@@ -74,3 +74,12 @@ alias ls='ls --color'
 
 # Shell integrations
 eval "$(fzf --zsh)"
+
+
+# Alias to navigate to the parent directory by typing '..' instead of 'cd ..'.
+# This is for convenience and does not affect system-wide functionality.
+alias ..='cd ..'
+
+# Load Rust environment variables to include Cargo and Rust binaries in PATH
+. "$HOME/.cargo/env"
+
