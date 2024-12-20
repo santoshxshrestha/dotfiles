@@ -1,39 +1,34 @@
-Here is a well-formatted README.md for your dotfiles repository, which you can use on GitHub:
+# My dotfiles
 
-# Dotfiles
-
-This repository contains the dotfiles for my system configuration.
+This directory contains the dotfiles for my system
 
 ## Requirements
 
-Before installing, ensure you have the following installed on your system:
+Ensure you have the following installed on your system
 
-- **Git**  
-Install Git with the following command:  
-  ```bash
-  pacman -S git
-- **stow**
-Install Stow with the following command:
-  ```bash
-  pacman -S stow
+### Git
 
-###Installation
+```
+pacman -S git
+```
 
-To set up the dotfiles, follow these steps:
+### Stow
 
-Clone the repository
-First, clone the dotfiles repository to your $HOME directory using Git:
-```bash
- git clone git@github.com:SantoshShrestha11/dotfiles.git
+```
+pacman -S stow
+```
 
-Navigate into the repository directory
-Change into the dotfiles directory:
+## Installation
 
-cd dotfiles
+First, check out the dotfiles repo in your $HOME directory using git
 
-Create symbolic links using Stow
-Use GNU Stow to create symlinks for the dotfiles in your home directory:
-```bash
- stow.
+```
+$ git clone git@github.com:SantoshShrestha11/dotfiles.git
+$ cd dotfiles
+```
 
-This will create symlinks for the dotfiles in your $HOME directory.
+then use GNU stow to create symlinks
+
+```
+$ stow .
+```
