@@ -1,0 +1,48 @@
+
+# Font settings
+font = { family = "Fira Code", size = 12.0 }
+
+# Window settings
+window = { padding = { x = 10, y = 10 }, dynamic_padding = true, transparency = 0.9 }
+
+# Colorscheme
+[colors]
+primary = { background = "#1e1e1e", foreground = "#dcdccc" }
+
+[colors.normal]
+black   = "#1e1e1e"
+red     = "#af5f5f"
+green   = "#5faf5f"
+yellow  = "#5f5faf"
+blue    = "#5f87af"
+magenta = "#8787af"
+cyan    = "#5fafaf"
+white   = "#dcdccc"
+
+[colors.bright]
+black   = "#1e1e1e"
+red     = "#ff6f6f"
+green   = "#8fdf8f"
+yellow  = "#8f8fff"
+blue    = "#8fafff"
+magenta = "#afffff"
+cyan    = "#8fffff"
+white   = "#ffffff"
+
+# Cursor settings
+cursor = { shape = "Block", blinking = true, hide_when_typing = false }
+
+# Scrolling
+scrolling = { history = 10000, multiplier = 3 }
+
+# Mouse settings
+mouse = { hide_when_typing = false, focus_behavior = "click" }
+
+# Key bindings
+[keybinds]
+    - { key = "C", action = "copy" }
+    - { key = "V", action = "paste" }
+    - { key = "Q", action = "quit" }
+
+# Transparency (optional)
+background_opacity = 0.8
