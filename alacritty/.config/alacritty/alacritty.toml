@@ -1,16 +1,27 @@
 
 # Font settings
-font = { family = "Fira Code", size = 12.0 }
+[font]
+#family = "Fira Code"
+size = 12.0
 
 # Window settings
-window = { padding = { x = 10, y = 10 }, dynamic_padding = true, transparency = 0.9 }
+[window]
+padding.x = 5
+padding.y = 5
+dynamic_padding= true
 
 # Colorscheme
-[colors]
-primary = { background = "#1e1e1e", foreground = "#dcdccc" }
+[colors.primary]
+#background = "#000000"
+#foreground = "#E0E0E0"
+
+[colors.cursor]
+cursor =  "#c0c0c0"
+text = "#0e0e0e"
+
 
 [colors.normal]
-black   = "#1e1e1e"
+black   = "#282828"
 red     = "#af5f5f"
 green   = "#5faf5f"
 yellow  = "#5f5faf"
@@ -20,7 +31,7 @@ cyan    = "#5fafaf"
 white   = "#dcdccc"
 
 [colors.bright]
-black   = "#1e1e1e"
+#black   = "#1e1e1d"
 red     = "#ff6f6f"
 green   = "#8fdf8f"
 yellow  = "#8f8fff"
@@ -29,20 +40,11 @@ magenta = "#afffff"
 cyan    = "#8fffff"
 white   = "#ffffff"
 
-# Cursor settings
-cursor = { shape = "Block", blinking = true, hide_when_typing = false }
 
 # Scrolling
-scrolling = { history = 10000, multiplier = 3 }
+[scrolling]
+history = 10000
+multiplier = 3
 
-# Mouse settings
-mouse = { hide_when_typing = false, focus_behavior = "click" }
 
-# Key bindings
-[keybinds]
-    - { key = "C", action = "copy" }
-    - { key = "V", action = "paste" }
-    - { key = "Q", action = "quit" }
 
-# Transparency (optional)
-background_opacity = 0.8
