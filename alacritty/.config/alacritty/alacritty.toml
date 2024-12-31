@@ -1,42 +1,110 @@
-
-# Font settings
-[font]
-#family ="/usr/share/fonts/TTF/JetBrainsMonoNerdFont-ExtraLight.ttf"
-size = 12.0
+[env]
+TERM                  = "xterm-256color"
 
 # Window settings
 [window]
-padding.x = 5
-padding.y = 5
+padding.x = 2
+padding.y = 2
 dynamic_padding= true
-
-# Colorscheme
-[colors.primary]
-background = "#181818" 
-foreground = "#c0c0c0"
-
-[colors.normal]
-black   = "#282828"
-red     = "#af5f5f"
-green   = "#5faf5f"
-yellow  = "#5f5faf"
-blue    = "#5f87af"
-magenta = "#8787af"
-cyan    = "#5fafaf"
-white   = "#dcdccc"
-
-[colors.bright]
-#black   = "#1e1e1d"
-red     = "#ff6f6f"
-green   = "#8fdf8f"
-yellow  = "#8f8fff"
-blue    = "#8fafff"
-magenta = "#afffff"
-cyan    = "#8fffff"
-white   = "#ffffff"
-
+decorations = "None"
+opacity = 1.0
+blur = true
 
 # Scrolling
 [scrolling]
-history = 10000
+history = 65535
 multiplier = 3
+
+
+
+[font]
+normal                = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold                  = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic                = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic           = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
+#size                  = 11.25
+offset                = { x = 0, y = 0 }
+glyph_offset          = { x = 0, y = 0 }
+builtin_box_drawing   = true
+
+
+# catpuccin-mocha, ported from .yml
+[colors.primary]
+background            = "#1E1E2E"
+foreground            = "#CDD6F4"
+dim_foreground        = "#CDD6F4"
+bright_foreground     = "#CDD6F4"
+
+[colors.cursor]
+text                  = "#1E1E2E"
+cursor                = "#F5E0DC"
+
+[colors.vi_mode_cursor]
+text                  = "#1E1E2E"
+cursor                = "#B4BEFE"
+
+[colors.search.matches]
+foreground            = "#1E1E2E"
+background            = "#A6ADC8"
+
+[colors.search.focused_match]
+foreground            = "#1E1E2E"
+background            = "#A6E3A1"
+
+[colors.hints.start]
+foreground            = "#1E1E2E"
+background            = "#F9E2AF"
+
+[colors.hints.end]
+foreground            = "#1E1E2E"
+background            = "#A6ADC8"
+
+[colors.line_indicator]
+#foreground            = "None"
+#background            = "None"
+
+[colors.footer_bar]
+foreground            = "#1E1E2E"
+background            = "#A6ADC8"
+
+[colors.selection]
+text                  = "#1E1E2E"
+background            = "#F5E0DC"
+
+[colors.normal]
+black                 = "#45475A"
+red                   = "#F38BA8"
+green                 = "#A6E3A1"
+yellow                = "#F9E2AF"
+blue                  = "#89B4FA"
+magenta               = "#F5C2E7"
+cyan                  = "#94E2D5"
+white                 = "#BAC2DE"
+
+[colors.bright]
+black                 = "#585B70"
+red                   = "#F38BA8"
+green                 = "#A6E3A1"
+yellow                = "#F9E2AF"
+blue                  = "#89B4FA"
+magenta               = "#F5C2E7"
+cyan                  = "#94E2D5"
+white                 = "#A6ADC8"
+
+[colors.dim]
+black                 = "#45475A"
+red                   = "#F38BA8"
+green                 = "#A6E3A1"
+yellow                = "#F9E2AF"
+blue                  = "#89B4FA"
+magenta               = "#F5C2E7"
+cyan                  = "#94E2D5"
+white                 = "#BAC2DE"
+
+[colors]
+indexed_colors = [
+  { index = 16, color = "#FAB387" },
+  { index = 17, color = "#F5E0DC" },
+]
+#transparent_background_colors = false
+draw_bold_text_with_bright_colors = true
