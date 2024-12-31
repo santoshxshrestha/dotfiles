@@ -1,7 +1,7 @@
 
 # Font settings
 [font]
-#family = "Fira Code"
+family = "/usr/share/fonts/TTF/JetBrainsMonoNerdFont-ExtraLight.ttf"
 size = 12.0
 
 # Window settings
@@ -12,13 +12,8 @@ dynamic_padding= true
 
 # Colorscheme
 [colors.primary]
-#background = "#000000"
-#foreground = "#E0E0E0"
-
-[colors.cursor]
-cursor =  "#c0c0c0"
-text = "#0e0e0e"
-
+background = "#181818" 
+foreground = "#c0c0c0"
 
 [colors.normal]
 black   = "#282828"
@@ -45,6 +40,3 @@ white   = "#ffffff"
 [scrolling]
 history = 10000
 multiplier = 3
-
-
-
