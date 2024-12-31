@@ -1,7 +1,7 @@
 
 # Font settings
 [font]
-family = "/usr/share/fonts/TTF/JetBrainsMonoNerdFont-ExtraLight.ttf"
+#family ="/usr/share/fonts/TTF/JetBrainsMonoNerdFont-ExtraLight.ttf"
 size = 12.0
 
 # Window settings
