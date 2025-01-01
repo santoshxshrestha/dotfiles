@@ -1,28 +1,36 @@
+-- lua/plugins/rose-pine.lua
 return {
-  'shaunsingh/nord.nvim',
-  lazy = false,
-  priority = 1000,
+  'rose-pine/neovim',
+  lazy = false, -- Ensure the theme is loaded immediately
+  priority = 1000, -- High priority to load the theme early
   config = function()
-    -- Example config in lua
-    vim.g.nord_contrast = true
-    vim.g.nord_borders = false
-    vim.g.nord_disable_background = true
-    vim.g.nord_italic = false
-    vim.g.nord_uniform_diff_background = true
-    vim.g.nord_bold = false
+    -- Configure the rose-pine theme
+    require('rose-pine').setup {
+      disable_background = true, -- Start with a transparent background
+      disable_float_background = true,
+      bold_vert_split = false,
+    }
 
-    -- Load the colorscheme
-    require('nord').set()
+    -- Apply the colorscheme
+    vim.cmd.colorscheme 'rose-pine'
 
-    -- Toggle background transparency
+    -- Background transparency toggle
     local bg_transparent = true
 
     local toggle_transparency = function()
       bg_transparent = not bg_transparent
-      vim.g.nord_disable_background = bg_transparent
-      vim.cmd [[colorscheme nord]]
+      if bg_transparent then
+        -- Enable transparent background
+        vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+        vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+      else
+        -- Disable transparent background
+        vim.api.nvim_set_hl(0, 'Normal', { bg = nil })
+        vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil })
+      end
     end
 
+    -- Map a key to toggle transparency
     vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
   end,
 }
