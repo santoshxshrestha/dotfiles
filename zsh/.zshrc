@@ -83,5 +83,3 @@ alias ..='cd ..'
 . "$HOME/.cargo/env"
 
 #appended complitions to the files path
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifer init -)"
