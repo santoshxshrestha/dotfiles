@@ -83,3 +83,4 @@ alias ..='cd ..'
 . "$HOME/.cargo/env"
 
 #appended complitions to the files path
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
