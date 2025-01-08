@@ -3,15 +3,15 @@
 }
 
 window {
-	font-family: "Monofur Nerd Font";
+	font-family: "FiraCode Nerd Font Mono";
 	font-size: 13px;
 }
 
 window {
     margin: 0px;
-    border: 2px soli #eb6f92;
+    border: 2px solid #cba6f7;
 /*
-    background-color: #191724;
+    background-color: #161925;
 */
     background-color: transparent;
     border-radius: 16px;
@@ -22,15 +22,15 @@ window {
     margin: 20px;
     padding-left: 20px;
     border: none;
-    color: #e0def4;
+    color: #fff;
     font-weight: bold;
-    background: linear-gradient(90deg, #26233a 0%, #e0def4 100%);
+    background: linear-gradient(90deg, #cba6f7 0%, #94e2d5 100%);
    	outline: none;
     border-radius: 16px;
 }
 
 #input image {
-    color: #e0def4;
+    color: #fff;
 }
 
 #input:focus {
@@ -42,7 +42,7 @@ window {
     margin: 20px;
     margin-top: 0px;
     border: none;
-    color: #191724; 
+    color: #cba6f7;
     border-radius: 16px;
 }
 
@@ -65,7 +65,7 @@ window {
 }
 
 #text:selected {
-    color: #e0def4;
+    color: #fff;
     font-weight: bold;
 }
 
@@ -79,7 +79,6 @@ window {
     border: none;
     padding: 0px;
     background: transparent;
-    color: #e0def4
 }
 
 #entry {
@@ -96,5 +95,5 @@ window {
     margin: 0px;
     border: none;
     border-radius: 16px;
-    background: linear-gradient(90deg, #eb6f92 0%, #e0def4 100%);
+    background: linear-gradient(90deg, #cba6f7 0%, #94e2d5 100%);
 }
