@@ -15,8 +15,8 @@
         "cpu",
         "memory",
         "temperature",
-        "disk",
-        "custom/updates"
+        "disk"
+       // "custom/updates"
     ],
     "modules-center": [
        "hyprland/window",
@@ -125,7 +125,6 @@
         "tooltip-format-wifi": "{icon} {essid} ({signalStrength}%)",
         "tooltip-format-ethernet": "{icon} {ipaddr}/{cidr}",
         "tooltip-format-disconnected": "{icon} Disconnected",
-        "on-click-right": "nm-connection-editor",
         "format-icons": {
             "ethernet": "",
             "disconnected": "⚠",
