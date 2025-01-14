@@ -1,11 +1,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -18,7 +13,6 @@ fi
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 #Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
@@ -40,10 +34,6 @@ zinit snippet OMZP::command-not-found
 autoload -U compinit && compinit
 
 zinit cdreplay -q
-
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 #keybindings
 bindkey '^f' autosuggest-accept
@@ -83,4 +73,4 @@ alias ..='cd ..'
 . "$HOME/.cargo/env"
 
 #appended complitions to the files path
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+eval "$(starship init zsh)"
