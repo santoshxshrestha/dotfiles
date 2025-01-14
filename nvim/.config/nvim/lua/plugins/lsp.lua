@@ -160,7 +160,7 @@ return {
     --  - settings (table): Override the default settings passed when initializing the server.
     --        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
     local servers = {
-      -- clangd = {},
+      clangd = {},
       -- gopls = {},
       -- pyright = {},
       rust_analyzer = {
@@ -179,30 +179,30 @@ return {
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       -- ts_ls = {}, -- tsserver is deprecated
-      ruff = {},
-      pylsp = {
-        settings = {
-          pylsp = {
-            plugins = {
-              pyflakes = { enabled = false },
-              pycodestyle = { enabled = false },
-              autopep8 = { enabled = false },
-              yapf = { enabled = false },
-              mccabe = { enabled = false },
-              pylsp_mypy = { enabled = false },
-              pylsp_black = { enabled = false },
-              pylsp_isort = { enabled = false },
-            },
-          },
-        },
-      },
-      html = { filetypes = { 'html', 'twig', 'hbs' } },
-      cssls = {},
-      tailwindcss = {},
-      dockerls = {},
-      sqlls = {},
-      terraformls = {},
-      jsonls = {},
+      -- ruff = {}, --it is a linter for python i can un comment it when I want to code in python.
+      -- pylsp = {
+      --   settings = {
+      --     pylsp = {
+      --       plugins = {
+      --         pyflakes = { enabled = false },
+      --         pycodestyle = { enabled = false },
+      --         autopep8 = { enabled = false },
+      --         yapf = { enabled = false },
+      --         mccabe = { enabled = false },
+      --         pylsp_mypy = { enabled = false },
+      --         pylsp_black = { enabled = false },
+      --         pylsp_isort = { enabled = false },
+      --       },
+      --     },
+      --   },
+      -- },
+      -- html = { filetypes = { 'html', 'twig', 'hbs' } },
+      -- cssls = {},
+      -- tailwindcss = {},
+      -- dockerls = {},
+      -- sqlls = {},
+      -- terraformls = {},
+      -- jsonls = {},
 
       lua_ls = {
         -- cmd = {...},
