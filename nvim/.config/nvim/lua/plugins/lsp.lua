@@ -15,6 +15,14 @@ return {
     'hrsh7th/cmp-nvim-lsp',
   },
   config = function()
+    vim.diagnostic.config {
+      -- Show diagnostics while typing (in insert mode)
+      update_in_insert = true, -- You can set this to false if you don't want diagnostics while typing
+      virtual_text = true, -- Display virtual text for diagnostics directly in the code
+      signs = true, -- Display signs in the gutter for diagnostics
+      underline = true, -- Underline code with errors/warnings
+      severity_sort = true, -- Sort diagnostics by severity (e.g., errors first)
+    }
     -- Brief aside: **What is LSP?**
     --
     -- LSP is an initialism you've probably heard, but might not understand what it is.
@@ -155,7 +163,15 @@ return {
       -- clangd = {},
       -- gopls = {},
       -- pyright = {},
-      -- rust_analyzer = {},
+      rust_analyzer = {
+        settings = {
+          ['rust-analyzer'] = {
+            checkOnSave = {
+              command = 'clippy',
+            },
+          },
+        },
+      },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
