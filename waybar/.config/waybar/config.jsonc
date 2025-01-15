@@ -107,7 +107,7 @@
         // },
         "escape": true,
         "tooltip": true,
-        "exec": "~/.scripts/caway.sh",
+        "exec": "~/.scripts/playerctl-status.sh",
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
