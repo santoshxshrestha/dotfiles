@@ -30,11 +30,7 @@
         "custom/notifications",
         "tray",
         "clock"
-       // "custom/weather",
-        // "custom/cycle_wall",
-        // "custom/clipboard",
-        //"custom/power"
-        // "custom/custom"
+       // "custom/custom"
     ],
     "hyprland/workspaces": {
         // "format": "{icon} {name}",
@@ -94,15 +90,15 @@
         // "exec-tooltip": "~/.scripts/updates tooltip"
     },
     "custom/music": {
-        "format": "{icon}{0}",
-        "format-icons": {
-            // "Playing": " ", // Uncomment if not using the dynamic script
-            "Paused": " ",
-            "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
-        },
+        // "format": "{icon}{0}",
+        // "format-icons": {
+        //     // "Playing": " ", // Uncomment if not using the dynamic script
+        //     "Paused": " ",
+        //     "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+        // },
         "escape": true,
         "tooltip": true,
-        "exec": "~/.scripts/caway -b 10 -e",
+        "exec": "~/.scripts/caway.sh",
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-scroll-up": "playerctl previous",
@@ -239,47 +235,6 @@
             "activated": "",
             "deactivated": ""
         }
-    },
-    "custom/weather": {
-        "tooltip": true,
-        "format": "{}",
-        "exec": "~/.scripts/tools/expand weather",
-        "return-type": "json"
-    },
-    "custom/ss": {
-        "format": "{}",
-        "exec": "~/./scripts/tools/expand ss-icon",
-        "return-type": "json",
-        "on-click": "~/.scripts/screenshot_full"
-    },
-    "custom/cycle_wall": {
-        "format": "{}",
-        "exec": "~/.scripts/tools/expand wall",
-        "return-type": "json",
-        // "interval": 1,
-        "on-click": "~/.scripts/tools/expand cycle",
-        "on-click-right": "~/.scripts/tools/expand cycler"
-    },
-    "custom/clipboard": {
-        "format": "{}",
-        "exec": "~/.scripts/tools/expand clipboard",
-        "return-type": "json",
-        // Window position is managed in Hyperland config's windowrulev2
-        "on-click": "pkill tofi || sleep 0.15 && cliphist list | tofi -c ~/.config/tofi/tofi.clip.conf | cliphist decode | wl-copy",
-        "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        "on-click-right": "pkill tofi || sleep 0.15 && cliphist list | tofi -c ~/.config/tofi/tofi.clip.conf | cliphist delete",
-        // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
-        // "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
-        // "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        // "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
-        "escape": true
-    },
-    "custom/power": {
-        "format": "{}",
-        // "exec": "~/.scripts/tools/expand power",
-        "exec": "echo '{\"text\":\"⏻\",\"tooltip\":\"Power\"}'",
-        "return-type": "json",
-        "on-click": "~/.config/wlogout/launch.sh"
     },
     "custom/custom": {
         "format": "{}",
