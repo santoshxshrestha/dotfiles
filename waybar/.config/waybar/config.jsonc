@@ -16,10 +16,10 @@
         "memory",
         "temperature",
         "disk"
-       // "custom/updates"
+        // "custom/updates"
     ],
     "modules-center": [
-       "hyprland/window",
+        "hyprland/window",
         "custom/music"
     ],
     "modules-right": [
@@ -30,7 +30,7 @@
         "custom/notifications",
         "tray",
         "clock"
-       // "custom/custom"
+        // "custom/custom"
     ],
     "hyprland/workspaces": {
         // "format": "{icon} {name}",
@@ -49,7 +49,7 @@
     "cpu": {
         "format": " {usage}%",
         "tooltip": true,
-        
+
         "on-click": "alacritty -e btop",
         "interval": 2
     },
@@ -59,20 +59,29 @@
         "on-click": "alacritty -e btop",
         "interval": 2
     },
+    //na xou hai yo wala 
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        // this line below this is hard to learn hai but khoja feri maja auxa
+        //janya paxi
+        //values here are all good so change na gara hai 
+        "thermal-zone": 8,
+        //"hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
         "critical-threshold": 40,
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
         "format-icons": [
             "",
-            "",
-            ""
+            "", 
+            ""   
         ],
-        "tooltip": true,
-        "on-click": "alacritty -e btop",
-        "interval": 2
+    "tooltip": true,
+    "on-click": "alacritty -e btop",
+    "interval": 2,
+    "temperature-ranges": [
+      { "min": 0, "max": 25, "icon": "" },//low wala
+      { "min": 25, "max": 35, "icon": "" },//mid wala 
+      { "min": 40, "max": 100, "icon": "" } //critical wala
+    ]
     },
     "disk": {
         "format": " {percentage_used}% ({free})",
@@ -104,7 +113,8 @@
         "on-scroll-up": "playerctl previous",
         "on-scroll-down": "playerctl next",
         "on-click-right": "amberol",
-        "max-length": 35
+        "max-length": 35,
+        "interval": 2
     },
     "hyprland/window": {
         "format": "{}",
