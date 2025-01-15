@@ -16,7 +16,7 @@ if [ -z "$players" ]; then
 fi
 
 # Get the current player status
-status=$(playerctl status 2>/dev/null || echo "Darling play something")
+status=$(playerctl status 2>/dev/null || echo "No player")
 
 # Handle the case where the player exists but is stopped
 if [ "$status" == "Stopped" ] || [ "$status" == "No player" ]; then
