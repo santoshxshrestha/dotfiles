@@ -16,11 +16,11 @@
   "theme.notification.scaling": 100,
   "theme.bar.menus.menu.battery.scaling": 100,
   "theme.bar.menus.menu.network.scaling": 100,
-  "theme.bar.menus.menu.dashboard.scaling": 100,
+  "theme.bar.menus.menu.dashboard.scaling": 70,
   "theme.bar.border.width": "0.11em",
   "theme.bar.border_radius": "0.4em",
   "theme.bar.buttons.y_margins": "0.1em",
-  "theme.bar.buttons.padding_x": "0.7rem",
+  "theme.bar.buttons.padding_x": "0.9rem",
   "theme.bar.buttons.radius": "1em",
   "theme.bar.buttons.workspaces.enableBorder": false,
   "bar.workspaces.monitorSpecific": true,
@@ -70,5 +70,8 @@
   "bar.customModules.netstat.dynamicIcon": false,
   "theme.bar.buttons.background_hover_opacity": 100,
   "theme.bar.outer_spacing": "0.1em",
-  "theme.bar.buttons.spacing": "0.1em"
+  "theme.bar.buttons.spacing": "0.1em",
+  "theme.bar.margin_top": "0.5em",
+  "theme.bar.buttons.padding_y": "0.1rem",
+  "theme.bar.menus.menu.notifications.scaling": 90
 }
