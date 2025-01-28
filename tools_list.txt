@@ -1,0 +1,4 @@
+when using the vs-code install the following things:-
+1.prettier -code formatter <it is installed in the nivm and you can install it in the vs code too
+                            it is just used to give the code a proper look with some of the indelting things>
+2. 
