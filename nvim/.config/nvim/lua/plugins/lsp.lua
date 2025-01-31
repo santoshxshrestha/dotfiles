@@ -179,23 +179,23 @@ return {
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
       -- ts_ls = {}, -- tsserver is deprecated
-      -- ruff = {}, --it is a linter for python i can un comment it when I want to code in python.
-      -- pylsp = {
-      --   settings = {
-      --     pylsp = {
-      --       plugins = {
-      --         pyflakes = { enabled = false },
-      --         pycodestyle = { enabled = false },
-      --         autopep8 = { enabled = false },
-      --         yapf = { enabled = false },
-      --         mccabe = { enabled = false },
-      --         pylsp_mypy = { enabled = false },
-      --         pylsp_black = { enabled = false },
-      --         pylsp_isort = { enabled = false },
-      --       },
-      --     },
-      --   },
-      -- },
+      ruff = {}, --it is a linter for python i can un comment it when I want to code in python.
+      pylsp = {
+        settings = {
+          pylsp = {
+            plugins = {
+              pyflakes = { enabled = false },
+              pycodestyle = { enabled = false },
+              autopep8 = { enabled = false },
+              yapf = { enabled = false },
+              mccabe = { enabled = false },
+              pylsp_mypy = { enabled = false },
+              pylsp_black = { enabled = false },
+              pylsp_isort = { enabled = false },
+            },
+          },
+        },
+      },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       -- tailwindcss = {},
