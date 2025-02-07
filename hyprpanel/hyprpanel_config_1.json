@@ -1,5 +1,5 @@
 {
-  "bar.customModules.updates.pollingInterval": 21600000,
+  "bar.customModules.updates.pollingInterval": 1440000,
   "theme.font.size": "1.1rem",
   "theme.font.weight": 500,
   "tear": false,
@@ -12,7 +12,7 @@
   "theme.font.style": "italic",
   "theme.font.label": "JetBrainsMonoNL Nerd Font Propo Bold Italic",
   "scalingPriority": "gdk",
-  "theme.bar.scaling": 100,
+  "theme.bar.scaling": 80,
   "theme.notification.scaling": 100,
   "theme.bar.menus.menu.battery.scaling": 100,
   "theme.bar.menus.menu.network.scaling": 100,
@@ -54,7 +54,7 @@
   "theme.osd.orientation": "vertical",
   "menus.clock.weather.location": "Los Angeles",
   "menus.clock.weather.enabled": false,
-  "menus.dashboard.stats.enable_gpu": true,
+  "menus.dashboard.stats.enable_gpu": false,
   "theme.bar.buttons.modules.power.enableBorder": false,
   "menus.power.lowBatteryNotification": false,
   "theme.bar.transparent": true,
@@ -73,5 +73,7 @@
   "theme.bar.buttons.spacing": "0.1em",
   "theme.bar.margin_top": "0.5em",
   "theme.bar.buttons.padding_y": "0.1rem",
-  "theme.bar.menus.menu.notifications.scaling": 90
+  "theme.bar.menus.menu.notifications.scaling": 90,
+  "menus.dashboard.directories.enabled": false,
+  "menus.dashboard.stats.enabled": false
 }
