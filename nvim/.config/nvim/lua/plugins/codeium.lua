@@ -8,7 +8,7 @@ return {
     virtual_text = {
       enabled = not vim.g.ai_cmp,
       key_bindings = {
-        accept = '<C-y', -- handled by nvim-cmp / blink.cmp
+        accept = '<C-y>', -- handled by nvim-cmp / blink.cmp
         next = '<C-n>',
         prev = '<C-p>',
       },
