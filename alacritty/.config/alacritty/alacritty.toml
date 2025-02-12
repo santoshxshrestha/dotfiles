@@ -14,7 +14,7 @@ blur = true
 
 # Scrolling
 [scrolling]
-history = 65535
+history = 5000
 multiplier = 3
 
 
