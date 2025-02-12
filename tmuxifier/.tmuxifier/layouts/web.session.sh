@@ -9,8 +9,13 @@ if initialize_session "web_in_progress"; then
     # Create a new window inline within session layout definition.
     new_window "code"
     run_cmd "nvim ."
+
     new_window "live_server"
     run_cmd "live-server"
+
+    new_window "git"
+    run_cmd "lazygit"
+
     new_window "terminal"
 
     # Load a defined window layout.
