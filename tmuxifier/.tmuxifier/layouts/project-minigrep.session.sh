@@ -9,7 +9,10 @@ if initialize_session "project-minigrep"; then
     # Create a new window inline within session layout definition.
     new_window "learn"
     run_cmd "nvim ."
+    new_window "git"
+    run_cmd "lazygit"
     new_window "terminal"
+
     # Load a defined window layout.
     #load_window "example"
 
