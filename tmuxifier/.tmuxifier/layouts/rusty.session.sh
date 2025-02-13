@@ -9,9 +9,6 @@ if initialize_session "rusty"; then
     # Create a new window inline within session layout definition.
     new_window "nvim"
 
-    new_window "git"
-    run_cmd "lazygit"
-
     new_window "terminal"
 
     # Load a defined window layout.
