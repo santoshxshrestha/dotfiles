@@ -18,7 +18,7 @@ return {
         'shfmt', -- Shell formatter
         'checkmake', -- linter for Makefiles
         'ruff', -- Python linter and formatter
-        'taplo', --Tomal lsp
+        'taplo', --Toml lsp
         'rustfmt', -- Rust formatter
       },
       automatic_installation = true,
