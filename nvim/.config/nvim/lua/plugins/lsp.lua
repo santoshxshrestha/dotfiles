@@ -176,13 +176,13 @@ return {
                 enable = true,
               },
             },
-            checkOnSave = {
-              command = 'check',
-              extraArgs = { '--target-dir', 'target/rust-analyzer' },
-            },
-            procMacro = {
-              enable = false, --enable while using hte macros like serde, toki::main etc
-            },
+            -- checkOnSave = {
+            --   command = 'check',
+            --   extraArgs = { '--target-dir', 'target/rust-analyzer' },
+            -- },
+            -- procMacro = {
+            -- enable = false, --enable while using hte macros like serde, toki::main etc
+            -- },
           },
         },
       },
