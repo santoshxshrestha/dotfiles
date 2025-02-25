@@ -212,7 +212,20 @@ return {
       -- },
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
-      tailwindcss = {},
+      tailwindcss = {
+        capabilities = capabilities,
+        -- settings = {
+        --   tailwindCSS = {
+        --     experimental = {
+        --       classRegex = {
+        --         'class="([^"]*)"', -- matches class="...
+        --         'className="([^"]*)"', -- matches className="...
+        --         'classList="([^"]*)"', -- for Alpine.js
+        --       },
+        --     },
+        --   },
+        -- },
+      },
       -- dockerls = {},
       -- sqlls = {},
       -- terraformls = {},
