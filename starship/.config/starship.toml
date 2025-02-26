@@ -1,189 +1,135 @@
-"$schema" = 'https://starship.rs/config-schema.json'
+# Ultra Cool Starship Configuration with Neon Cyberpunk Theme
 
 format = """
-[](surface0)\
 $os\
 $username\
-[](bg:peach fg:surface0)\
+$hostname\
 $directory\
-[](fg:peach bg:green)\
 $git_branch\
 $git_status\
-[](fg:green bg:teal)\
-$c\
-$rust\
-$golang\
-$nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
-$python\
-[](fg:teal bg:blue)\
-$docker_context\
-[](fg:blue bg:purple)\
-$time\
-[](fg:purple)\
-$line_break$character"""
+$cmd_duration\
+$line_break\
+$character"""
 
-palette = 'rose_pine'
+# Cool prompt character with neon effect
+[character]
+success_symbol = "[λ](bold bright-green)"
+error_symbol = "[✖](bold bright-red)"
+vimcmd_symbol = "[➤](bold bright-cyan)"
 
-[palettes.rose_pine_dark]
-color_fg0 = "#e0def4"
-color_bg1 = "#191724"
-color_bg3 = "#26233a"
-color_blue = "#31748f"
-color_aqua = "#9ccfd8"
-color_green = "#c4a7e7"
-color_orange = "#f6c177"
-color_purple = "#ebbcba"
-color_red = "#eb6f92"
-color_yellow = "#f6c177"
-
-[palettes.rose_pine]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-orange = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
+# OS detection with custom icons
 [os]
+format = "[$symbol](bold bright-purple) "
 disabled = false
-style = "bg:surface0 fg:text"
 
 [os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = ""
-Manjaro = ""
+Windows = "󰖳"
+Macos = ""
 Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
+Ubuntu = ""
+Debian = ""
+Raspbian = ""
 Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
+CentOS = ""
+Fedora = ""
+Alpine = ""
+Amazon = ""
+Unknown = "󰣖"
 
+# Username with cool styling
 [username]
+style_user = "bold bright-cyan"
+style_root = "bold bright-red"
+format = "[$user@](bright-green)"
+disabled = false
 show_always = true
-style_user = "bg:surface0 fg:text"
-style_root = "bg:surface0 fg:text"
-format = '[ $user ]($style)'
 
+# Hostname styling
+[hostname]
+ssh_only = false
+format = "[$hostname](bold bright-magenta) "
+disabled = false
+
+# Directory with neon styling
 [directory]
-style = "fg:mantle bg:peach"
-format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 2
 truncation_symbol = "…/"
+home_symbol = "󱂵 "
+read_only = " "
+read_only_style = "bright-red"
+format = "in [/](bright-white)[$path](bold bright-cyan)[/](bright-white) "
+style = "bold bright-cyan"
 
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = "󰝚 "
-"Pictures" = " "
-"Developer" = "󰲋 "
-
+# Git branch with cool styling
 [git_branch]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
+symbol = "󰘬 "
+truncation_length = 16
+truncation_symbol = "…"
+format = "on [$symbol$branch](bold bright-green) "
+style = "bold bright-green"
 
+# Git status with neon indicators
 [git_status]
-style = "bg:teal"
-format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
+format = '([$all_status$ahead_behind](bold bright-red) )'
+style = "bold bright-red"
+conflicted = "⚡"
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
+up_to_date = "✓"
+untracked = "?"
+stashed = "⚑"
+modified = "!"
+staged = "+"
+renamed = "→"
+deleted = "✘"
 
+# Command duration in cyberpunk style
+[cmd_duration]
+min_time = 1000
+format = "took [$duration](bold bright-yellow) "
+style = "bold bright-yellow"
+
+# Custom module styles for programming languages
 [nodejs]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[c]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[golang]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[php]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[java]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[kotlin]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[haskell]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+symbol = "󰎙 "
+format = "[${symbol}${version}](bold bright-green) "
 
 [python]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+symbol = "󰌠 "
+format = "[${symbol}${version}](bold bright-blue) "
+
+[rust]
+symbol = "󱘗 "
+format = "[${symbol}${version}](bold bright-red) "
+
+[java]
+symbol = "󰬷 "
+format = "[${symbol}${version}](bold bright-red) "
+
+[golang]
+symbol = "󰟓 "
+format = "[${symbol}${version}](bold bright-cyan) "
 
 [docker_context]
-symbol = ""
-style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+symbol = "󰡨 "
+format = "[${symbol}${context}](bold bright-blue) "
 
-[time]
-disabled = false
-time_format = "%I:%M %p" #12-hour format with the am and pm
-style = "bg:peach"
-format = '[[  $time ](fg:mantle bg:purple)]($style)'
+# Battery display with cool icons
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+format = "[$symbol$percentage]($style) "
 
-[line_break]
-disabled = false
+[[battery.display]]
+threshold = 10
+style = "bold bright-red"
 
-[character]
-disabled = false
-success_symbol = '[](bold fg:green)'
-error_symbol = '[](bold fg:red)'
-vimcmd_symbol = '[](bold fg:creen)'
-vimcmd_replace_one_symbol = '[](bold fg:purple)'
-vimcmd_replace_symbol = '[](bold fg:purple)'
-vimcmd_visual_symbol = '[](bold fg:lavender)'
+[[battery.display]]
+threshold = 30
+style = "bold bright-yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold bright-green"
