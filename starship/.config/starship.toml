@@ -55,5 +55,5 @@ format = "[$symbol$number]($style) "
 [time]
 disabled = false
 style = "bold bright-white"
-format = "at [  $time]($style) "
+format = "at [   $time]($style) "
 time_format = "%I:%M %p" #12-hour format with the am and pm
