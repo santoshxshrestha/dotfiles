@@ -80,3 +80,7 @@ eval "$(tmuxifier init -)"
 
 #appended complitions to the files path
 eval "$(starship init zsh)"
+ 
+#PATHS here
+export PATH=~/bin:$PATH
+export PATH=~/.local/scripts/:$PATH
