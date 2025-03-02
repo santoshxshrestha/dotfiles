@@ -10,7 +10,7 @@ return {
       's1n7ax/nvim-window-picker',
       version = '2.*',
       config = function()
-        require('nvim-window-picker').setup {
+        require('window-picker').setup {
           filter_rules = {
             include_current_win = false,
             autoselect_one = true,
