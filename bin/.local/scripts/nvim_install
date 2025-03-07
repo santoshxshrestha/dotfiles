@@ -8,13 +8,37 @@ fi
 
 echo "Dang you already gave me sudo permission !!! "
 # Define the list of packages
-packages=(git nodejs npm gcc python3 neovim stow tmux)
+packages=(
+    fastfetch
+    git
+    nodejs
+    npm
+    gcc
+    python3
+    neovim
+    stow
+    tmux
+    unzip
+    wget
+    ripgrep
+    ruby
+    luarocks
+    python-pip
+    php
+    cargo
+    xclip
+    lazygit
+    tree-sitter
+)
 
 # Install packages using pacman (modify if using another package manager)
 echo "Installing packages..."
+
 pacman -S --noconfirm "${packages[@]}"
+
 cd $HOME
-echo "Cloing the tmux plugin manager that you gonna use ..."
+
+echo "Cloning the tmux plugin manager that you gonna use ..."
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 # Clone dotfiles repository
@@ -24,6 +48,11 @@ git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git $H
 # Stow the dotfiles
 cd $HOME/dotfiles || exit
 echo "Stowing dotfiles..."
-stow nvim tmux
+stow nvim tmux fastfetch
 
+# This package (neovim on npm) is a Node.js client for Neovim’s RPC API.
+#It allows Node.js applications (like Neovim plugins) to send commands and interact with Neovim.
+npm install -g neovim
+
+fastfetch
 echo "Setup complete!"
