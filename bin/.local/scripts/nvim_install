@@ -8,7 +8,7 @@ fi
 
 echo "Dang you already gave me sudo permission !!! "
 # Define the list of packages
-packages=(git neovim stow tmux)
+packages=(git nodejs npm gcc python3 neovim stow tmux)
 
 # Install packages using pacman (modify if using another package manager)
 echo "Installing packages..."
