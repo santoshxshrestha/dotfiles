@@ -32,3 +32,17 @@ then use GNU stow to create symlinks
 ```
 $ stow .
 ```
+
+---
+
+# `Curl command for nvim `
+
+Note: `only for arch in the docker`
+
+```bash
+curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/aesthetics/bin/.local/scripts/nvim_install| bash
+```
+
+```sh
+sh <(curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/aesthetics/bin/.local/scripts/nvim_install)
+```
