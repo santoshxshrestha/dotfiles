@@ -6,7 +6,7 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-echo "Dang you already gave me sudo permission !!!" 
+echo "Dang you already gave me sudo permission !!!"
 sleep 2
 echo "I won't do that bad."
 sleep 2
@@ -32,6 +32,7 @@ packages=(
     xclip
     lazygit
     tree-sitter
+    shellcheck
 )
 
 # Install packages using pacman arch by the way ..
