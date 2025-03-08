@@ -47,18 +47,18 @@ pacman -S --noconfirm "${packages[@]}"
 
 cd "$HOME" || echo -e "${RED}Error:${NC}Failed to navigate to home directory.\n${BLUE}Info:${NC}aborting...\n" && sleep 2 && return
 
-echo "${BLUE}Cloning:${NC} The tmux plugin manager that you gonna use ..." && sleep 2
+echo -e "${BLUE}Cloning:${NC} The tmux plugin manager that you gonna use ..." && sleep 2
 git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
 # Clone dotfiles repository
 cd echo -e "${RED} Error:${NC} Failed to navigate to home directory.\n${BLUE}Info:${NC}aborting...\n" && sleep 2 && return
 
-echo "${BLUE}Cloning:${NC} Dotfiles form main branch..."
+echo -e "${BLUE}Cloning:${NC} Dotfiles form main branch..."
 git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git "$HOME/dotfiles/"
 
 # Stow the dotfiles
 cd "$HOME/dotfiles" || echo -e "${BLUE}Error:${NC} Failed to navigate to dotfiles directory.\n${BLUE}Info:${NC}aborting...\n" && sleep 2 && return
-echo "Stowing dotfiles..."
+echo -e "Stowing dotfiles..."
 stow nvim tmux fastfetch
 
 # This package (neovim on npm) is a Node.js client for Neovim’s RPC API.
