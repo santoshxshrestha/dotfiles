@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
 
 # Ensure the script runs with root privileges
 if [[ $EUID -ne 0 ]]; then
@@ -6,9 +11,9 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-echo "Dang you already gave me sudo permission !!!" 
+echo -e "${RED}Error:${NC} Dang you already gave me sudo permission !!!"
 sleep 2
-echo "I won't do that bad."
+echo "${GREEN}I won't do that bad."
 sleep 2
 # Define the list of packages
 packages=(
@@ -32,25 +37,27 @@ packages=(
     xclip
     lazygit
     tree-sitter
+    shellcheck
 )
 
 # Install packages using pacman arch by the way ..
-echo "Installing packages..."
+echo "${BLUE}Info:${NC} Installing packages..."
 
 pacman -S --noconfirm "${packages[@]}"
 
-cd $HOME
+cd "$HOME" || echo -e "${RED}Error:${NC}Failed to navigate to home directory.\n${BLUE}Info:${NC}aborting...\n" && sleep 2 && return
 
-echo "Cloning the tmux plugin manager that you gonna use ..."
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+echo "${BLUE}Cloning:${NC} The tmux plugin manager that you gonna use ..." && sleep 2
+git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
 
 # Clone dotfiles repository
-cd $HOME
-echo "Cloning dotfiles form main branch..."
-git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git $HOME/dotfiles/
+cd echo -e "${RED} Error:${NC} Failed to navigate to home directory.\n${BLUE}Info:${NC}aborting...\n" && sleep 2 && return
+
+echo "${BLUE}Cloning:${NC} Dotfiles form main branch..."
+git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git "$HOME/dotfiles/"
 
 # Stow the dotfiles
-cd $HOME/dotfiles || exit
+cd "$HOME/dotfiles" || echo -e "${BLUE}Error:${NC} Failed to navigate to dotfiles directory.\n${BLUE}Info:${NC}aborting...\n" && sleep 2 && return
 echo "Stowing dotfiles..."
 stow nvim tmux fastfetch
 
@@ -59,4 +66,5 @@ stow nvim tmux fastfetch
 npm install -g neovim
 
 fastfetch
-echo "Setup complete!"
+sleep 2
+echo -e "${GREEN}Setup complete!"
