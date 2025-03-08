@@ -7,7 +7,7 @@ NC='\033[0m' # No Color
 
 # Ensure the script runs with root privileges
 if [[ $EUID -ne 0 ]]; then
-    echo -e "${RED}Please run as root: sudo $0{NC}"
+    echo -e "${RED}Please run as root: sudo ${NC}"
     exit 1
 fi
 
