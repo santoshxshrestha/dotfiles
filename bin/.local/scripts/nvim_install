@@ -6,7 +6,10 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-echo "Dang you already gave me sudo permission !!! "
+echo "Dang you already gave me sudo permission !!!" 
+sleep 2
+echo "I won't do that bad."
+sleep 2
 # Define the list of packages
 packages=(
     fastfetch
@@ -31,7 +34,7 @@ packages=(
     tree-sitter
 )
 
-# Install packages using pacman (modify if using another package manager)
+# Install packages using pacman arch by the way ..
 echo "Installing packages..."
 
 pacman -S --noconfirm "${packages[@]}"
@@ -45,6 +48,7 @@ git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 cd $HOME
 echo "Cloning dotfiles form main branch..."
 git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git $HOME/dotfiles/
+
 # Stow the dotfiles
 cd $HOME/dotfiles || exit
 echo "Stowing dotfiles..."
