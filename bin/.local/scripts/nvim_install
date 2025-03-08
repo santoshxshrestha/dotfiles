@@ -13,7 +13,7 @@ fi
 
 echo -e "${RED}Error:${NC} Dang you already gave me sudo permission !!!"
 sleep 2
-echo "${GREEN}I won't do that bad.{NC}"
+echo -e "${GREEN}I won't do that bad.{NC}"
 sleep 2
 # Define the list of packages
 packages=(
@@ -41,7 +41,7 @@ packages=(
 )
 
 # Install packages using pacman arch by the way ..
-echo "${BLUE}Info:${NC} Installing packages..."
+echo -e "${BLUE}Info:${NC} Installing packages..."
 
 pacman -S --noconfirm "${packages[@]}"
 
