@@ -7,13 +7,13 @@ NC='\033[0m' # No Color
 
 # Ensure the script runs with root privileges
 if [[ $EUID -ne 0 ]]; then
-    echo "Please run as root: sudo $0"
+    echo -e "${RED}Please run as root: sudo $0{NC}"
     exit 1
 fi
 
 echo -e "${RED}Error:${NC} Dang you already gave me sudo permission !!!"
 sleep 2
-echo "${GREEN}I won't do that bad."
+echo "${GREEN}I won't do that bad.{NC}"
 sleep 2
 # Define the list of packages
 packages=(
