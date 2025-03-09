@@ -45,30 +45,30 @@ echo -e "${BLUE}Info:${NC} Installing packages..."
 
 pacman -S --noconfirm "${packages[@]}"
 
-cd "/home" || {
-    echo -e "${RED}Error:${NC} Failed to navigate to home directory."
+cd "/root" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to /root directory."
     echo -e "${BLUE}Info:${NC} Aborting...\n"
     sleep 2
     exit 1
 }
 
 echo -e "${BLUE}Cloning:${NC} The tmux plugin manager that you gonna use ..." && sleep 2
-git clone https://github.com/tmux-plugins/tpm "/home/.tmux/plugins/tpm"
+git clone https://github.com/tmux-plugins/tpm "/root/.tmux/plugins/tpm"
 
 # Clone dotfiles repository
-cd "/home" || {
-    echo -e "${RED}Error:${NC} Failed to navigate to home directory."
+cd "/root" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to root directory."
     echo -e "${BLUE}Info:${NC} Aborting...\n"
     sleep 2
     exit 1
 }
 
 echo -e "${BLUE}Cloning:${NC} Dotfiles form main branch..."
-git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git "/home/dotfiles/"
+git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git "/root/dotfiles/"
 
 # Stow the dotfiles
-cd "/home" || {
-    echo -e "${RED}Error:${NC} Failed to navigate to home directory."
+cd "/root" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to /root directory."
     echo -e "${BLUE}Info:${NC} Aborting...\n"
     sleep 2
     exit 1
