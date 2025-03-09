@@ -38,6 +38,8 @@ $ stow .
 # `Curl command for quick nvim `
 
 Note: `only for arch in the docker`
+`sync the package database without upgrading installed packages`
+`or upgrate them before running the commands below`
 
 ```bash
 curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch| bash
