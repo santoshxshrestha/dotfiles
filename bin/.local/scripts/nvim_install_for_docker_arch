@@ -67,7 +67,7 @@ echo -e "${BLUE}Cloning:${NC} Dotfiles form main branch..."
 git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git "/root/dotfiles/"
 
 # Stow the dotfiles
-cd "/root" || {
+cd "/root/dotfiles" || {
     echo -e "${RED}Error:${NC} Failed to navigate to /root directory."
     echo -e "${BLUE}Info:${NC} Aborting...\n"
     sleep 2
