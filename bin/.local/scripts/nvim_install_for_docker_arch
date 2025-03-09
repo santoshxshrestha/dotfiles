@@ -90,3 +90,10 @@ npm install -g neovim
 fastfetch
 sleep 2
 echo -e "${GREEN}Setup complete!${NC}"
+echo -e "${GREEN}
+Your Neovim configuration is ready. 
+${NC}Launch Neovim in the terminal. 
+On first launch, the package manager will automatically install all plugins. 
+You may see installation progress messages. 
+Once complete, restart Neovim for all features to be fully activated.
+"
