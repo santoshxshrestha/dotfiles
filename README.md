@@ -35,14 +35,14 @@ $ stow .
 
 ---
 
-# `Curl command for nvim `
+# `Curl command for quick nvim `
 
 Note: `only for arch in the docker`
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install| bash
+curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch| bash
 ```
 
 ```sh
-sh <(curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install)
+sh <(curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch)
 ```
