@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 # Script to switch to a random static wallpaper
-# Filename: switch-to-static.sh
 
 # Kill any running mpvpaper
 pkill mpvpaper

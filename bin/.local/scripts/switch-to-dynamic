@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
-# Script to switch to a random video wallpaper
-# Filename: switch-to-video.sh
+# Script to switch to a random dynamic wallpaper
 
 # Kill hyprpaper to save resources
 pkill hyprpaper
