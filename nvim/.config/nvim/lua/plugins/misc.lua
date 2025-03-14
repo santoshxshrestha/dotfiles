@@ -35,6 +35,9 @@ return {
     opts = { signs = false },
   },
   {
+    'simrat39/rust-tools.nvim',
+  },
+  {
     -- High-performance color highlighter
     'norcalli/nvim-colorizer.lua',
     config = function()
