@@ -20,7 +20,7 @@ pkill hyprpaper
 
 #Start hyprpaper and wait for it to initialize
 hyprpaper &
-sleep 0.5
+# sleep 0.5
 
 # Get random wallpaper different from current
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
