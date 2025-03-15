@@ -15,8 +15,16 @@ fi
 # Get current wallpaper
 CURRENT_WALL=$(hyprctl hyprpaper listactive | grep -oP "(?<=wallpaper: ).*" || echo "none")
 
+#Kill any existing hyprpaper instancd
+pkill hyprpaper
+
+#Start hyprpaper and wait for it to initialize
+hyprpaper &
+# sleep 0.5
+
 # Get random wallpaper different from current
 WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
 
 # Apply the wallpaper
+hyprctl hyprpaper preload "$WALLPAPER"
 hyprctl hyprpaper reload ,"$WALLPAPER"
