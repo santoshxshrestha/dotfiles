@@ -29,7 +29,7 @@ configuration {
     font: "JetBrainsMono Nerd Font 12";
     
     /* Deep, dark color scheme inspired by Hyprland */
-    bg-col: #0a0a0fea;          /* Very dark background with transparency */
+    bg-col: #191724;          /* Very dark background with transparency */
     bg-col-light: #11111bea;    /* Slightly lighter background */
     border-col: #30304faa;      /* Subtle border color */
     selected-col: #181825ee;    /* Selected item background */
@@ -53,7 +53,7 @@ configuration {
 }
 
 window {
-    width: 30%;
+    width: 25%;
     transparency: "real";
     background-color: @bg-col;
     border: 2px;
