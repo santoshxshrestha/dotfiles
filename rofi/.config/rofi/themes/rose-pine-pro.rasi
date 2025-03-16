@@ -1,0 +1,225 @@
+/**
+ * Ultra-refined Rose Pine Dark theme for Rofi
+ * Created to match Hyprland setup with comprehensive styling
+ * and fixed syntax issues
+ */
+
+configuration {
+    modi: "drun,run,window,ssh";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: "   Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+    kb-row-up: "Up,Control+k";
+    kb-row-down: "Down,Control+j";
+    kb-accept-entry: "Return,KP_Enter";
+    kb-remove-to-eol: "Control+Shift+e";
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+    kb-remove-char-back: "BackSpace";
+}
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    
+    /* Base colors from Rose Pine */
+    base: #191724;
+    surface: #1f1d2e;
+    overlay: #26233a;
+    muted: #6e6a86;
+    subtle: #908caa;
+    text: #e0def4;
+    love: #eb6f92;
+    gold: #f6c177;
+    rose: #ebbcba;
+    pine: #31748f;
+    foam: #9ccfd8;
+    iris: #c4a7e7;
+    
+    background-color: @base;
+    text-color: @text;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 35%;
+    transparency: "real";
+    background-color: @base;
+    border: 3px;
+    border-color: @iris;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+mainbox {
+    children: [inputbar, message, listview, mode-switcher];
+    background-color: transparent;
+    spacing: 12px;
+    padding: 4px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @surface;
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px;
+    border-color: @iris;
+}
+
+prompt {
+    background-color: transparent;
+    padding: 0 12px 0 0;
+    text-color: @iris;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    background-color: transparent;
+    placeholder: "Search...";
+    placeholder-color: @subtle;
+    padding: 0;
+}
+
+message {
+    border-radius: 12px;
+    padding: 8px;
+    background-color: @surface;
+    margin: 0 4px;
+}
+
+textbox {
+    padding: 8px;
+    text-color: @text;
+}
+
+listview {
+    lines: 8;
+    columns: 1;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    background-color: transparent;
+    border-radius: 12px;
+    margin: 0 4px;
+    spacing: 4px;
+}
+
+scrollbar {
+    width: 4px;
+    border-radius: 2px;
+    background-color: @surface;
+    handle-color: @iris;
+    handle-width: 4px;
+    padding: 0;
+}
+
+element {
+    padding: 10px;
+    margin: 2px 0;
+    border-radius: 10px;
+    spacing: 10px;
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: @surface;
+    text-color: @text;
+}
+
+element selected.normal {
+    background-color: @overlay;
+    text-color: @rose;
+    border: 1px;
+    border-color: @iris;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0 12px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    highlight: none;
+}
+
+mode-switcher {
+    margin: 4px;
+    spacing: 8px;
+}
+
+button {
+    text-color: @subtle;
+    border-radius: 10px;
+    background-color: @surface;
+    padding: 8px 12px;
+    horizontal-align: 0.5;
+    border: 1px;
+    border-color: transparent;
+}
+
+button selected {
+    background-color: @overlay;
+    text-color: @iris;
+    border-color: @iris;
+}
+
+/* Fix error with styling - ensuring all properties are properly defined */
+error-message {
+    background-color: @love;
+    text-color: @text;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Ensure proper rendering of all elements */
+num-filtered-rows, num-rows {
+    text-color: @muted;
+    expand: false;
+}
+
+case-indicator {
+    text-color: @muted;
+    background-color: transparent;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @surface;
+}
+
+/* Additional customization for better visual design */
+listview {
+    border: 0;
+}
+
+element-text selected {
+    text-color: @rose;
+}
+
+element {
+    children: [element-icon, element-text];
+}
+
+element-icon selected {
+    background-color: transparent;
+}
+
+/* Ensures proper configuration */
+configuration {
+    font: "JetBrainsMono Nerd Font 12";
+}
