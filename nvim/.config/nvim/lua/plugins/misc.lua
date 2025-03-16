@@ -1,5 +1,9 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
+  { --vim be good by primeagen for practicing
+    'ThePrimeagen/vim-be-good',
+  },
+
   {
     -- Tmux & split window navigation
     'christoomey/vim-tmux-navigator',
