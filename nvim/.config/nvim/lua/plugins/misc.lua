@@ -28,6 +28,10 @@ return {
     opts = {},
   },
   {
+    -- Show your current context
+    'nvim-treesitter/nvim-treesitter-context',
+  },
+  {
     -- Highlight todo, notes, etc in comments
     'folke/todo-comments.nvim',
     event = 'VimEnter',
