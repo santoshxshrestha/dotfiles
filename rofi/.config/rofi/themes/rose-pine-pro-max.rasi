@@ -9,7 +9,7 @@ configuration {
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
-    disable-history: false;
+    disable-history: true;
     hide-scrollbar: true;
     display-drun: "  Apps ";
     display-run: "  Run ";
@@ -88,7 +88,7 @@ prompt {
 
 entry {
     background-color: transparent;
-    placeholder: "Search...";
+    placeholder: "search...";
     placeholder-color: @fg-col-dim;
     padding: 0;
 }
