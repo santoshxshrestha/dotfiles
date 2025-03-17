@@ -26,6 +26,7 @@ return { -- Autocompletion
       },
     },
     'saadparwaiz1/cmp_luasnip',
+    'github/copilot.vim',
 
     -- Adds other completion capabilities.
     --  nvim-cmp does not ship with all sources by default. They are split
@@ -127,10 +128,18 @@ return { -- Autocompletion
         -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         -- Select next/previous item with Tab / Shift + Tab
+        -- ['<Tab>'] = cmp.mapping(function(fallback)
+        --   if cmp.visible() then
+        --     cmp.select_next_item()
+        --   elseif luasnip.expand_or_locally_jumpable() then
+        --     luasnip.expand_or_jump()
+        --   else
+        --     fallback()
+        --   end
+
+        -- The line upper is the original form the github a edited it according to my need
         ['<Tab>'] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_locally_jumpable() then
+          if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           else
             fallback()
