@@ -26,7 +26,7 @@ return { -- Autocompletion
       },
     },
     'saadparwaiz1/cmp_luasnip',
-    'github/copilot.vim',
+    -- 'github/copilot.vim',
 
     -- Adds other completion capabilities.
     --  nvim-cmp does not ship with all sources by default. They are split
@@ -164,6 +164,7 @@ return { -- Autocompletion
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'buffer' },
+        { name = 'codeium' },
         { name = 'path' },
       },
       formatting = {
@@ -174,6 +175,7 @@ return { -- Autocompletion
             nvim_lsp = '[LSP]',
             luasnip = '[Snippet]',
             buffer = '[Buffer]',
+            codeium = '[codeium]',
             path = '[Path]',
           })[entry.source.name]
           return vim_item
