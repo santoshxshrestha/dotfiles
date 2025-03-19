@@ -214,17 +214,17 @@ return {
       cssls = {},
       tailwindcss = {
         capabilities = capabilities,
-        -- settings = {
-        --   tailwindCSS = {
-        --     experimental = {
-        --       classRegex = {
-        --         'class="([^"]*)"', -- matches class="...
-        --         'className="([^"]*)"', -- matches className="...
-        --         'classList="([^"]*)"', -- for Alpine.js
-        --       },
-        --     },
-        --   },
-        -- },
+        settings = {
+          tailwindCSS = {
+            experimental = {
+              classRegex = {
+                'class="([^"]*)"', -- matches class="...
+                'className="([^"]*)"', -- matches className="...
+                'classList="([^"]*)"', -- for Alpine.js
+              },
+            },
+          },
+        },
       },
       -- dockerls = {},
       -- sqlls = {},
