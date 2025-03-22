@@ -64,7 +64,7 @@ cd "/root" || {
 }
 
 echo -e "${BLUE}Cloning:${NC} Dotfiles form main branch..."
-git clone --depth=1 -b main https://github.com/SantoshShrestha11/dotfiles.git "/root/dotfiles/"
+git clone --depth=1 -b main https://github.com/santoshxshrestha/dotfiles.git "/root/dotfiles/"
 
 # Stow the dotfiles
 cd "/root/dotfiles" || {
