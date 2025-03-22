@@ -34,9 +34,9 @@ cherry_pick_commit() {
     local target_branch=$1
     local commit=$2
 
-    # Checkout the target branch
-    git checkout "$target_branch" || {
-        echo "Error: Failed to checkout $target_branch."
+    # switch the target branch
+    git switch "$target_branch" || {
+        echo "Error: Failed to switch $target_branch."
         exit 1
     }
 
