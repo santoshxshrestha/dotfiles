@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+# Ensure we are in a git repository
+if ! git rev-parse --git-dir >/dev/null 2>&1; then
+    echo "Error: This is not a git repository."
+    exit 1
+fi
+
+# Fetch the latest changes from the remote
+git fetch origin
+
+# Get the most recent commit hash from branch3
+commit_hash=$(git log -1 --pretty=format:"%H" origin/aesthetics)
+
+if [ -z "$commit_hash" ]; then
+    echo "Error: Could not find the most recent commit on aesthetics."
+    exit 1
+fi
+
+# Function to cherry-pick a commit into a branch
+cherry_pick_commit() {
+    local target_branch=$1
+    local commit=$2
+
+    # Checkout the target branch
+    git checkout "$target_branch" || {
+        echo "Error: Failed to checkout $target_branch."
+        exit 1
+    }
+
+    # Pull the latest changes from the remote
+    git pull origin "$target_branch" || {
+        echo "Error: Failed to pull latest changes for $target_branch."
+        exit 1
+    }
+
+    # Cherry-pick the commit
+    git cherry-pick "$commit" || {
+        echo "Error: Failed to cherry-pick commit $commit into $target_branch."
+        exit 1
+    }
+
+    # Push the changes to the remote
+    git push origin "$target_branch" || {
+        echo "Error: Failed to push changes to $target_branch."
+        exit 1
+    }
+
+    echo "Successfully cherry-picked commit $commit into $target_branch."
+}
+
+# Cherry-pick the commit into branch1
+cherry_pick_commit "main" "$commit_hash"
+
+# Cherry-pick the commit into branch2
+cherry_pick_commit "performance" "$commit_hash"
+
+git switch aesthetics
