@@ -23,7 +23,7 @@ pacman -S stow
 First, check out the dotfiles repo in your $HOME directory using git
 
 ```
-$ git clone git@github.com:SantoshShrestha11/dotfiles.git
+$ git clone git@github.com:santoshxshrestha/dotfiles.git
 $ cd dotfiles
 ```
 
@@ -42,9 +42,9 @@ Note: `only for arch in the docker`
 `or upgrate them before running the commands below`
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch| bash
+curl -sSL https://raw.githubusercontent.com/santoshxshrestha/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch| bash
 ```
 
 ```sh
-sh <(curl -sSL https://raw.githubusercontent.com/SantoshShrestha11/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch)
+sh <(curl -sSL https://raw.githubusercontent.com/santoshxshrestha/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch)
 ```
