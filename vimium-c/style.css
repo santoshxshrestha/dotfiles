@@ -133,6 +133,7 @@ body:after {
 }
 
 #bar::before {
+  margin-left: 20px;
   content: "❯";
   display: inline-block;
   width: 1rem;
@@ -153,6 +154,7 @@ body:after {
 }
 
 #input {
+  margin-left: 24px;
   border: none;
   background: none;
   box-shadow: unset;
@@ -171,8 +173,8 @@ body:after {
 }
 
 #toolbar .button {
-  height: 24px;
-  width: 24px;
+  height: 14px;
+  width: 14px;
   padding: 5px;
   cursor: pointer;
   border: 3px transparent solid;
