@@ -175,7 +175,7 @@ body:after {
 #toolbar .button {
   height: 14px;
   width: 14px;
-  padding: 5px;
+  padding:8px,5px,5px,5px;
   cursor: pointer;
   border: 3px transparent solid;
   position: relative;
