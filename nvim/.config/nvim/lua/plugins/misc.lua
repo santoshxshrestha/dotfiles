@@ -1,5 +1,10 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
+  { --undotree by jiaoshijie
+    'jiaoshijie/undotree',
+    dependencies = 'nvim-lua/plenary.nvim',
+    config = true,
+  },
   { --vim be good by primeagen for practicing
     'ThePrimeagen/vim-be-good',
   },
