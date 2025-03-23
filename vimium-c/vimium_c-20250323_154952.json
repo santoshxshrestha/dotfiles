@@ -1,7 +1,7 @@
 {
 	"name": "Vimium C",
-	"@time": "3/23/2025, 12:18:10 AM",
-	"time": 1742668390099,
+	"@time": "3/23/2025, 3:49:52 PM",
+	"time": 1742724292265,
 	"environment": {
 		"extension": "1.99.997",
 		"platform": "linux",
@@ -195,7 +195,7 @@
 		"#toolbar .button {",
 		"  height: 14px;",
 		"  width: 14px;",
-		"  padding: 5px;",
+		"  padding:8px,5px,5px,5px;",
 		"  cursor: pointer;",
 		"  border: 3px transparent solid;",
 		"  position: relative;",
