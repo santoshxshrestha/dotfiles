@@ -75,5 +75,13 @@ vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = 'Open float
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostics list' })
 
+-- UndoTree Keybinding
+vim.keymap.set('n', '<leader>u', function()
+  require('undotree').toggle()
+end, { desc = 'Toggle UndoTree' })
+
+-- Commented description for each keybinding
+-- <leader>u toggles the undo tree to visualize undo history
+
 -- Dismiss Noice Message
 vim.keymap.set('n', '<leader>q', '<cmd>NoiceDismiss<CR>', { desc = 'Dismiss Noice Message' })
