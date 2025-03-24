@@ -55,7 +55,7 @@ return {
         },
         indent = {
           indent_size = 2,
-          padding = 1, -- extra padding on left hand side
+          -- padding = 1, -- extra padding on left hand side
           -- indent guides
           with_markers = true,
           indent_marker = '│',
@@ -126,7 +126,7 @@ return {
       -- see `:h neo-tree-custom-commands-global`
       commands = {},
       window = {
-        position = 'left',
+        position = 'float',
         width = 40,
         mapping_options = {
           noremap = true,
@@ -309,7 +309,7 @@ return {
     }
 
     vim.cmd [[nnoremap \ :Neotree reveal<cr>]]
-    vim.keymap.set('n', '<leader>e', ':Neotree toggle position=left<CR>', { noremap = true, silent = true }) -- focus file explorer
+    vim.keymap.set('n', '<leader>e', ':Neotree toggle position=float<CR>', { noremap = true, silent = true }) -- focus file explorer
     vim.keymap.set('n', '<leader>ngs', ':Neotree float git_status<CR>', { noremap = true, silent = true }) -- open git status window
   end,
 }
