@@ -71,7 +71,7 @@ eval "$(fzf --zsh)"
 alias ..='cd ..'
 
 # Other aliases
-alias asdf='shutdown now'
+alias asdf='/sbin/shutdown now'
 
 # Load Rust environment variables to include Cargo and Rust binaries in PATH
 . "$HOME/.cargo/env"
