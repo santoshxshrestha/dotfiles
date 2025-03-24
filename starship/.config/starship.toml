@@ -45,7 +45,7 @@ truncation_length = 2
 home_symbol = "󱂵 "
 read_only = " "
 read_only_style = "bright-red"
-format = "in [./](bright-white)[$path](bold bright-cyan) "
+format = "in [](bright-white)[$path](bold bright-cyan) "
 style = "bold bright-cyan"
 
 # Git branch with cool styling
