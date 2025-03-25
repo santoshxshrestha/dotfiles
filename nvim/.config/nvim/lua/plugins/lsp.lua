@@ -18,10 +18,10 @@ return {
     vim.diagnostic.config {
       -- Show diagnostics while typing (in insert mode)
       update_in_insert = true, -- You can set this to false if you don't want diagnostics while typing
-      virtual_text = false, -- Display virtual text for diagnostics directly in the code
+      virtual_text = true, -- Display virtual text for diagnostics directly in the code
       signs = true, -- Display signs in the gutter for diagnostics
       underline = true, -- Underline code with errors/warnings
-      severity_sort = false, -- Sort diagnostics by severity (e.g., errors first)
+      severity_sort = true, -- Sort diagnostics by severity (e.g., errors first)
     }
     -- Brief aside: **What is LSP?**
     --
@@ -252,6 +252,7 @@ return {
             format = {
               enable = false,
             },
+            globals = { 'vim' },
           },
         },
       },
