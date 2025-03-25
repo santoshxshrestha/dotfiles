@@ -20,7 +20,7 @@ truncation_length = 3
 truncation_symbol = "…/"
 home_symbol = "~"
 style = "bold bright-cyan"
-format = "at [$path]($style) "
+format = " [$path]($style) "
 
 [git_branch]
 symbol = "󰘬 "
