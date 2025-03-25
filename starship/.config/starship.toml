@@ -1,7 +1,7 @@
 # Ultra Neon Starship Terminal Configuration
 
 format = """
-$username$directory$git_branch$git_status$cmd_duration$jobs$time$character"""
+$os$username$directory$git_branch$git_status$cmd_duration$jobs$time$character"""
 
 [character]
 success_symbol = "[➜](bold bright-green)"
@@ -17,10 +17,17 @@ show_always = true
 
 [directory]
 truncation_length = 3
-truncation_symbol = "…/"
 home_symbol = "~"
 style = "bold bright-cyan"
 format = " [$path]($style) "
+
+[os]
+format = "[$symbol](bold bright-purple) "
+disabled = false
+
+[os.symbols]
+Linux = "󰌽"
+Arch = "󰣇"
 
 [git_branch]
 symbol = "󰘬 "
