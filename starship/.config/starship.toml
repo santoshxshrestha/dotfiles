@@ -1,7 +1,7 @@
 # Ultra Neon Starship Terminal Configuration
 
 format = """
-$username$directory$git_branch$git_status$cmd_duration$jobs$time$line_break$character"""
+$username$directory$git_branch$git_status$cmd_duration$jobs$time$character"""
 
 [character]
 success_symbol = "[➜](bold bright-green)"
@@ -25,7 +25,7 @@ format = "at [$path]($style) "
 [git_branch]
 symbol = "󰘬 "
 style = "bold bright-green"
-format = "on [$symbol$branch]($style) "
+format = " [$symbol$branch]($style) "
 
 [git_status]
 style = "bold bright-red"
@@ -53,7 +53,7 @@ style = "bold bright-blue"
 format = "[$symbol$number]($style) "
 
 [time]
-disabled = false
+disabled = true
 style = "bold bright-white"
 format = "at [   $time]($style) "
 time_format = "%I:%M %p" #12-hour format with the am and pm
