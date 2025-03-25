@@ -56,4 +56,77 @@ return { -- Highlight, edit, and navigate code
   --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
   --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
   --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+  {
+    'nvim-treesitter/nvim-treesitter-context',
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+      require('treesitter-context').setup {
+        enable = true,
+        max_lines = 0,
+        min_window_height = 0,
+        line_numbers = true,
+        multiline_threshold = 20,
+        trim_scope = 'outer',
+        mode = 'cursor',
+        separator = nil,
+        zindex = 20,
+      }
+
+      -- Keymapping
+      vim.keymap.set('n', '[c', require('treesitter-context').go_to_context, { desc = 'Go to context', silent = true })
+    end,
+  },
+
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    require('nvim-treesitter.configs').setup {
+      textobjects = {
+        select = {
+          enable = true,
+
+          -- Automatically jump forward to textobj, similar to targets.vim
+          lookahead = true,
+
+          keymaps = {
+            -- You can use the capture groups defined in textobjects.scm
+            ['af'] = '@function.outer',
+            ['if'] = '@function.inner',
+            ['ac'] = '@class.outer',
+            -- You can optionally set descriptions to the mappings (used in the desc parameter of
+            -- nvim_buf_set_keymap) which plugins like which-key display
+            ['ic'] = { query = '@class.inner', desc = 'Select inner part of a class region' },
+            -- You can also use captures from other query groups like `locals.scm`
+            ['as'] = { query = '@local.scope', query_group = 'locals', desc = 'Select language scope' },
+
+            ['aa'] = '@parameter.outer',
+            ['ia'] = '@parameter.inner',
+            ['il'] = '@loop.inner',
+            ['al'] = '@loop.outer',
+          },
+          -- You can choose the select mode (default is charwise 'v')
+          --
+          -- Can also be a function which gets passed a table with the keys
+          -- * query_string: eg '@function.inner'
+          -- * method: eg 'v' or 'o'
+          -- and should return the mode ('v', 'V', or '<c-v>') or a table
+          -- mapping query_strings to modes.
+          selection_modes = {
+            ['@parameter.outer'] = 'v', -- charwise
+            ['@function.outer'] = 'V', -- linewise
+            ['@class.outer'] = '<c-v>', -- blockwise
+          },
+          -- If you set this to `true` (default is `false`) then any textobject is
+          -- extended to include preceding or succeeding whitespace. Succeeding
+          -- whitespace has priority in order to act similarly to eg the built-in
+          -- `ap`.
+          --
+          -- Can also be a function which gets passed a table with the keys
+          -- * query_string: eg '@function.inner'
+          -- * selection_mode: eg 'v'
+          -- and should return true or false
+          include_surrounding_whitespace = true,
+        },
+      },
+    },
+  },
 }
