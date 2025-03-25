@@ -14,9 +14,9 @@ return {
       ensure_installed = {
         'prettier', -- ts/js formatter
         'stylua', -- lua formatter
-        'eslint_d', -- ts/js linter
+        -- 'eslint_d', -- ts/js linter
         'shfmt', -- Shell formatter
-        'checkmake', -- linter for Makefiles
+        -- 'checkmake', -- linter for Makefiles
         'ruff', -- Python linter and formatter
         'taplo', --Toml lsp
         -- 'rustfmt', -- Rust formatter
