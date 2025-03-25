@@ -71,7 +71,7 @@ eval "$(fzf --zsh)"
 alias ..='cd ..'
 
 # Other aliases
-alias adsf='~/.local/scripts/sessionizer'
+alias asdf='~/.local/scripts/sessionizer'
 
 # Load Rust environment variables to include Cargo and Rust binaries in PATH
 . "$HOME/.cargo/env"
