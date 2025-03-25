@@ -1,14 +1,15 @@
 -- Standalone plugins with less than 10 lines of config go here
 return {
-  { --undotree by jiaoshijie
+  { -- Markdown renderer
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    opts = {},
+  },
+  { -- Undotree by jiaoshijie
     'jiaoshijie/undotree',
     dependencies = 'nvim-lua/plenary.nvim',
     config = true,
   },
-  { --vim be good by primeagen for practicing
-    'ThePrimeagen/vim-be-good',
-  },
-
   {
     -- Tmux & split window navigation
     'christoomey/vim-tmux-navigator',
@@ -43,7 +44,7 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
-  {
+  { -- Sets up nvim lsp for the rust_analyzer automatically
     'simrat39/rust-tools.nvim',
   },
   {
