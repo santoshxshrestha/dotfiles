@@ -279,11 +279,13 @@
   "menus.dashboard.shortcuts.left.shortcut1.command": "/home/santosh/.local/scripts/pomodoro\n",
   "menus.dashboard.shortcuts.left.shortcut1.icon": "",
   "menus.dashboard.shortcuts.left.shortcut3.command": "zen-browser https://discord.com/channels/@me",
-  "menus.dashboard.shortcuts.left.shortcut2.command": "mpv",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "zen-browser https://github.com/santoshxshrestha",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "pomodoro",
   "menus.dashboard.powermenu.avatar.image": "/home/santosh/Pictures/wallpaper-archive/Static-Wallpapers/Techno-Geek.png",
   "menus.dashboard.stats.interval": 2000,
   "menus.transition": "crossfade",
   "menus.clock.time.hideSeconds": false,
-  "bar.clock.rightClick": "/home/santosh/.local/scripts/pomodoro\n"
+  "bar.clock.rightClick": "/home/santosh/.local/scripts/pomodoro\n",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Github"
 }
