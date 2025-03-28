@@ -282,5 +282,8 @@
   "menus.dashboard.shortcuts.left.shortcut2.command": "mpv",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "pomodoro",
   "menus.dashboard.powermenu.avatar.image": "/home/santosh/Pictures/wallpaper-archive/Static-Wallpapers/Techno-Geek.png",
-  "menus.dashboard.stats.interval": 2000
+  "menus.dashboard.stats.interval": 2000,
+  "menus.transition": "crossfade",
+  "menus.clock.time.hideSeconds": false,
+  "bar.clock.rightClick": "/home/santosh/.local/scripts/pomodoro\n"
 }
