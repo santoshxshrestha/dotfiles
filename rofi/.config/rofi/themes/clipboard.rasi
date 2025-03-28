@@ -10,7 +10,7 @@ configuration {
     /* Advanced keyboard shortcuts */
     kb-row-up: "Up,Control+p,Control+k";
     kb-row-down: "Down,Control+n,Control+j";
-    kb-accept-entry: "Return,KP_Enter";
+    kb-accept-entry: "Return,KP_Enter,Control+y";
     kb-delete-entry: "Shift+Delete";
     kb-custom-1: "Alt+p";      // Pin entry
     kb-custom-2: "Alt+c";      // Clear history
@@ -51,7 +51,6 @@ window {
     background-color: @bg-primary;
     border-radius: 12px;
     padding: 15px;
-    cursor: "default";
 }
 
 mainbox {
