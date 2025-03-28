@@ -1,8 +1,3 @@
-/**
- * Hyprland-Inspired Dark Theme for Rofi
- * Features deep colors, transparency, and minimalist design
- */
-
 configuration {
     modi: "drun,run,window,ssh";
     show-icons: true;
