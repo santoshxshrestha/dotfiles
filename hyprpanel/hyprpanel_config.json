@@ -285,7 +285,9 @@
   "menus.dashboard.stats.interval": 2000,
   "menus.transition": "crossfade",
   "menus.clock.time.hideSeconds": false,
-  "bar.clock.rightClick": "/home/santosh/.local/scripts/pomodoro\n",
+  "bar.clock.rightClick": "",
   "menus.dashboard.shortcuts.left.shortcut2.icon": "",
-  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Github"
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Github",
+  "bar.launcher.middleClick": "zen-browser https://aur.archlinux.org/",
+  "bar.clock.middleClick": "/home/santosh/.local/scripts/pomodoro\n"
 }
