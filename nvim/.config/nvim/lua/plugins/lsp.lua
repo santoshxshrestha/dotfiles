@@ -18,7 +18,9 @@ return {
     vim.diagnostic.config {
       -- Show diagnostics while typing (in insert mode)
       update_in_insert = true, -- You can set this to false if you don't want diagnostics while typing
-      virtual_text = true, -- Display virtual text for diagnostics directly in the code
+      -- virtual_text = true, -- Display virtual text for diagnostics directly in the code
+      -- virtual_text = { current_line = true }, -- Display virtual text for diagnostics directly in the current_line
+      virtual_lines = { current_line = true }, -- Display virtual lines for diagnostics directly in the current_line
       signs = true, -- Display signs in the gutter for diagnostics
       underline = true, -- Underline code with errors/warnings
       severity_sort = true, -- Sort diagnostics by severity (e.g., errors first)
@@ -52,6 +54,13 @@ return {
     --    That is to say, every time a new file is opened that is associated with
     --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
     --    function will be executed to configure the current buffer
+    --
+    --    already enabled by the plugins so no need
+    -- vim.api.nvim_create_autocmd('ColorScheme', {
+    -- callback = function()
+    -- vim.api.nvim_set_hl(0, 'LspReferenceTarget', {})
+    -- end,
+    -- })
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
       callback = function(event)
