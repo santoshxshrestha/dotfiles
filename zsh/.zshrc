@@ -74,11 +74,11 @@ alias ..='cd ..'
 alias asdf='~/.local/scripts/sessionizer'
 
 # Load Rust environment variables to include Cargo and Rust binaries in PATH
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
 
 # Add tmuxifier to PATH
-export PATH="$HOME/.tmuxifier/bin:$PATH"
-eval "$(tmuxifier init -)"
+# export PATH="$HOME/.tmuxifier/bin:$PATH"
+# eval "$(tmuxifier init -)"
 
 #appended complitions to the files path
 eval "$(starship init zsh)"
