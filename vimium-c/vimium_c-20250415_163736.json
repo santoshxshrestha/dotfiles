@@ -1,12 +1,30 @@
 {
 	"name": "Vimium C",
-	"@time": "3/23/2025, 4:19:50 PM",
-	"time": 1742726090251,
+	"@time": "4/15/2025, 4:37:36 PM",
+	"time": 1744714356337,
 	"environment": {
-		"extension": "1.99.997",
+		"extension": "2.12.3",
 		"platform": "linux",
-		"firefox": 136
+		"firefox": 137
 	},
+	"exclusionRules": [
+		{
+			"passKeys": "",
+			"pattern": ":https://mail.google.com/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://play.rust-lang.org/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://deadshot.io/"
+		},
+		{
+			"passKeys": "",
+			"pattern": ":https://typecraft.dev/"
+		}
+	],
 	"grabBackFocus": true,
 	"keyLayout": 2,
 	"keyMappings": [
@@ -17,6 +35,7 @@
 		"map J nextTab",
 		""
 	],
+	"scrollStepSize": 200,
 	"userDefinedCss": [
 		"/*",
 		"vimium-snow theme",
@@ -127,7 +146,7 @@
 		"",
 		"body {",
 		"  border-radius: 14px;",
-		"  border: 3px rgba(0, 0, 0, 0.08) solid;",
+		"  border: 1px rgba(0, 0, 0, 0.08) solid;",
 		"  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.075);",
 		"}",
 		"",
