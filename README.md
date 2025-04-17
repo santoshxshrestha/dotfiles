@@ -48,3 +48,14 @@ curl -sSL https://raw.githubusercontent.com/santoshxshrestha/dotfiles/refs/heads
 ```sh
 sh <(curl -sSL https://raw.githubusercontent.com/santoshxshrestha/dotfiles/refs/heads/main/bin/.local/scripts/nvim_install_for_docker_arch)
 ```
+
+---
+
+# `Packages`
+
+```bash
+bash <(curl -sSL https://raw.githubusercontent.com/santoshxshrestha/dotfiles/refs/heads/main/bin/.local/scripts/packages)
+
+```
+
+---
