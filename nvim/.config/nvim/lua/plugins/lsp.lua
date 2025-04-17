@@ -222,6 +222,7 @@ return {
       html = { filetypes = { 'html', 'twig', 'hbs' } },
       cssls = {},
       tailwindcss = {
+        filetype = { 'html', 'css', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
         capabilities = capabilities,
         settings = {
           tailwindCSS = {
