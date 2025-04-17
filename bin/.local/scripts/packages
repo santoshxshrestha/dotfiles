@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 pacman_tools=(
     git
     curl
