@@ -219,7 +219,7 @@ return {
       --     },
       --   },
       -- },
-      html = { filetypes = { 'html', 'twig', 'hbs' } },
+      html = { filetypes = { 'html', 'twig', 'hbs', 'tera' } },
       cssls = {},
       tailwindcss = {
         filetype = { 'html', 'css', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
