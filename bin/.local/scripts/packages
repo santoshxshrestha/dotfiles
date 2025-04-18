@@ -24,7 +24,7 @@ pacman_tools=(
     grub-customizer
     nwg-look
     timeshift
-
+    playerctl
 )
 aur_tools=(
     zen-browser-bin
