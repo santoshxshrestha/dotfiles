@@ -207,10 +207,8 @@ if [[ "$choice" =~ ^[Yy]$ ]]; then
     fi
 
     echo -e "${GREEN}Cloning wallpaper-archive...${NC}"
-    git clone https://github.com/santoshxshrestha/wallpaper-archive.git "$HOME/Pictures/wallpaper-archive/"then
-    if [ $? -eq 0 ]; then
+    if git clone https://github.com/santoshxshrestha/wallpaper-archive.git "$HOME/Pictures/wallpaper-archive/"; then
         echo -e "${GREEN}Repository cloned successfully!${NC}"
-
     else
         echo -e "${RED}Failed to clone repository. Please check your internet connection and GitHub access.${NC}"
         exit 1
