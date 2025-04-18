@@ -3,13 +3,15 @@
 pacman_tools=(
     git
     curl
-    neovim
-    tmux
-    zsh
-    htop
-    ripgrep
     fzf
     tree
+    neovim
+    zsh
+    shellcheck
+    rust-analyzer
+    tmux
+    htop
+    ripgrep
     rofi-wayland
     yazi
     gimp
