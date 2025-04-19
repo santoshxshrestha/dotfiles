@@ -5,8 +5,9 @@ sync() {
     local music_dir="$HOME/storage/downloads/Music"
     local video_dir="$HOME/storage/downloads/Videos/To-Watch"
 
+
     (
-        echo "Downloading 'To-Watch' into $video_dir"
+        echo "Downloading To-Watch into $video_dir"
         yt-dlp -P "$video_dir" -w -c --no-abort-on-error "https://youtube.com/playlist?list=PLBBcaljFGSiSTqrzKibZJqKwzHiEEn1gc&si=KE_sh_KEKHZphj32"
     ) &
 
@@ -24,6 +25,6 @@ sync() {
             yt-dlp -P "$dir" -w -c --no-abort-on-error -x --audio-format best "$url"
         ) &
     done
-    wait
+   wait
     echo "All downloads completed."
 }
