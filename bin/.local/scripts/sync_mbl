@@ -1,13 +1,13 @@
+#!/usr/bin/env bash
 #sh <(curl -sSL https://raw.githubusercontent.com/santoshxshrestha/dotfiles/refs/heads/main/bin/.local/scripts/sync_mbl)
 #sh <(eval "$(echo Y3VybCAtc1NMIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9zYW50b3NoeHNocmVzdGhhL2RvdGZpbGVzL3JlZnMvaGVhZHMvbWFpbi9iaW4vLmxvY2FsL3NjcmlwdHMvc3luY19tYmw= | base64 --decode)")
 
-
-    local music_dir="$HOME/storage/downloads/Music"
-    local video_dir="$HOME/storage/downloads/Videos/To-Watch"
-
+{
+    music_dir="$HOME/storage/downloads/Music"
+    video_dir="$HOME/storage/downloads/Videos/To-Watch"
 
     (
-        echo "Downloading To-Watch into $video_dir"
+        echo "Downloading 'To-Watch' into $video_dir"
         yt-dlp -P "$video_dir" -w -c --no-abort-on-error "https://youtube.com/playlist?list=PLBBcaljFGSiSTqrzKibZJqKwzHiEEn1gc&si=KE_sh_KEKHZphj32"
     ) &
 
@@ -25,6 +25,6 @@
             yt-dlp -P "$dir" -w -c --no-abort-on-error -x --audio-format best "$url"
         ) &
     done
-   wait
+    wait
     echo "All downloads completed."
-
+}
