@@ -3,8 +3,8 @@
 #sh <(eval "$(echo Y3VybCAtc1NMIGh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS9zYW50b3NoeHNocmVzdGhhL2RvdGZpbGVzL3JlZnMvaGVhZHMvbWFpbi9iaW4vLmxvY2FsL3NjcmlwdHMvc3luY19tYmw= | base64 --decode)")
 
 {
-    local music_dir="$HOME/storage/downloads/Music"
-    local video_dir="$HOME/storage/downloads/Videos/To-Watch"
+    music_dir="$HOME/storage/downloads/Music"
+    video_dir="$HOME/storage/downloads/Videos/To-Watch"
 
     (
         echo "Downloading 'To-Watch' into $video_dir"
