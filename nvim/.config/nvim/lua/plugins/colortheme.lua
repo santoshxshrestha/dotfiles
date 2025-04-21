@@ -15,22 +15,22 @@ return {
     vim.cmd.colorscheme 'rose-pine'
 
     -- Background transparency toggle
-    local bg_transparent = true
-
-    local toggle_transparency = function()
-      bg_transparent = not bg_transparent
-      if bg_transparent then
-        -- Enable transparent background
-        vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
-        vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
-      else
-        -- Disable transparent background
-        vim.api.nvim_set_hl(0, 'Normal', { bg = nil })
-        vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil })
-      end
-    end
-
-    -- Map a key to toggle transparency
-    vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
+    -- local bg_transparent = true
+    --
+    -- local toggle_transparency = function()
+    --   bg_transparent = not bg_transparent
+    --   if bg_transparent then
+    --     -- Enable transparent background
+    --     vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+    --     vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+    --   else
+    --     -- Disable transparent background
+    --     vim.api.nvim_set_hl(0, 'Normal', { bg = nil })
+    --     vim.api.nvim_set_hl(0, 'NormalFloat', { bg = nil })
+    --   end
+    -- end
+    --
+    -- -- Map a key to toggle transparency
+    -- vim.keymap.set('n', '<leader>bg', toggle_transparency, { noremap = true, silent = true })
   end,
 }
