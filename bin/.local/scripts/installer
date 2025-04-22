@@ -79,6 +79,7 @@ pacman_tools=(
     nwg-look
     timeshift
     playerctl
+    sound-theme-freedesktop
 )
 aur_tools=(
     zen-browser-bin
