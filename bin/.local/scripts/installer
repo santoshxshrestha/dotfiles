@@ -80,6 +80,7 @@ pacman_tools=(
     timeshift
     playerctl
     lsd
+    sound-theme-freedestop
 )
 aur_tools=(
     zen-browser-bin
