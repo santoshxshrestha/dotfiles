@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+⁶#!/usr/bin/env bash
 # ANSI color codes
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -78,7 +78,8 @@ pacman_tools=(
     grub-customizer
     nwg-look
     timeshift
-    playerctl
+    playerctl 
+    lsd
     sound-theme-freedestop
 )
 aur_tools=(
