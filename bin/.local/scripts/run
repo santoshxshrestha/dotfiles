@@ -1,28 +1,18 @@
 #!/usr/bin/env bash
 
-file=$(ls -t | head -n 1)
-
+file=$(find . -type f -printf "%T@ %p\n" | sort -n | tail -1 | cut -d' ' -f2-)
 extension="${file##*.}"
 
 case "$extension" in
-    c)
-        echo "Compiling C file: $file"
-        gcc "$file" && ./a.out
-        ;;
-    cpp)
-        echo "Compiling C++ file: $file"
-        g++ "$file" && ./a.out
-        ;;
-    py)
-        echo "Running Python file: $file"
-        python "$file"
-        ;;
-    rs)
-        echo "Compiling and running Rust file: $file"
-        rustc "$file" && ./$(basename "$file" .rs)
-        ;;
-    *)
-        echo "Unsupported file type: .$extension"
-        ;;
+c)
+    echo "Compiling C file: $file"
+    gcc "$file" && ./a.out
+    ;;
+cpp)
+    echo "Compiling C++ file: $file"
+    g++ "$file" && ./a.out
+    ;;
+*)
+    echo "LOL got the wrong file in the buffer: .$extension"
+    ;;
 esac
-
