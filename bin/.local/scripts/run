@@ -13,6 +13,6 @@ cpp)
     g++ "$file" && ./a.out
     ;;
 *)
-    echo "LOL got the wrong file in the buffer: .$extension"
+    echo "Damn it! got the wrong file in the buffer: .$extension"
     ;;
 esac
