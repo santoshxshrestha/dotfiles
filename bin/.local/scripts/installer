@@ -16,41 +16,6 @@ sleep 2
 echo -e "${GREEN}Switch the network connection to stable one.${NC}"
 sleep 2
 
-if command -v yay &>/dev/null; then
-    echo -e "${GREEN}yay is already installed.${NC}"
-fi
-
-echo -e "${BLUE}yay is not installed.${NC}"
-read -rp $'\nDo you want to install yay now? (y/n): ' choice
-
-if [[ "$choice" =~ ^[Yy]$ ]]; then
-    echo -e "${GREEN}Installing yay...${NC}"
-
-    sudo pacman -S --needed --noconfirm base-devel git
-
-    # Clone yay /tmp is better place then home
-    cd /tmp || exit 1
-    git clone https://aur.archlinux.org/yay.git
-    cd yay || {
-        echo -e "${RED}Failed to enter yay directory.${NC}"
-        exit 1
-    }
-
-    # Build and install yay
-    makepkg -si --noconfirm
-
-    # Confirm installation
-    if command -v yay &>/dev/null; then
-        echo -e "${GREEN}yay installed successfully!${NC}"
-    else
-        echo -e "${RED}yay installation failed.${NC}"
-        exit 1
-    fi
-else
-    echo -e "${RED}Skipping yay installation as per user choice.${NC}"
-    exit 0
-fi
-
 pacman_tools=(
     git
     curl
