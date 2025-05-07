@@ -12,6 +12,10 @@ cpp)
     echo "Compiling C++ file: $file"
     g++ "$file" && ./a.out
     ;;
+js)
+    echo "Running js file: $file"
+    node "$file"
+    ;;
 *)
     echo "Damn it! got the wrong file in the buffer: .$extension"
     ;;
