@@ -201,7 +201,7 @@ return {
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      -- ts_ls = {}, -- tsserver is deprecated
+      ts_ls = {}, -- tsserver is deprecated
       -- ruff = {}, --it is a linter for python i can un comment it when I want to code in python.
       -- pylsp = {
       --   settings = {
